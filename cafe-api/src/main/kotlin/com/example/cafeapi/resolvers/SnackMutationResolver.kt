@@ -25,9 +25,10 @@ class SnackMutationResolver( val snackRepository: SnackRepository) : GraphQLMuta
         return true
     }
 
-    fun updateSnack(id: String, amount: Float) : Snack {
+    fun updateSnack(id: String, name: String , amount: Float) : Snack {
         val snack = snackRepository.findById(id)
         snack.ifPresent{
+            it.name = name
             it.amount = amount
             snackRepository.save(it)
         }
