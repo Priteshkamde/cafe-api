@@ -2,6 +2,7 @@
 graphql:
   servlet:
     mapping: /graphql
+    endpoint: /graphql
     enabled: true
     corsEnabled: true
 graphiql:
@@ -10,5 +11,5 @@ graphiql:
   enabled: true
   pageTitle: GraphiQL
   cdn:
-    enabled: false
+    enabled: true
     version: 0.11.11
